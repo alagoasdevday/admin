@@ -119,7 +119,7 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.allow_comments = false
+  config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
   # config.show_comments_in_menu = false
@@ -194,6 +194,12 @@ ActiveAdmin.setup do |config|
   #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #     end
   #   end
+
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add id: "sponsor", label: 'Sponsors', priority: 20
+    end
+  end
 
   # == Download Links
   #

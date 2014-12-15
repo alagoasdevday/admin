@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215130638) do
+ActiveRecord::Schema.define(version: 20141215200918) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,5 +62,22 @@ ActiveRecord::Schema.define(version: 20141215130638) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sponsor_categories", force: true do |t|
+    t.string   "name"
+    t.integer  "position",   default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsors", force: true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.integer  "sponsor_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sponsors", ["sponsor_category_id"], name: "index_sponsors_on_sponsor_category_id"
 
 end

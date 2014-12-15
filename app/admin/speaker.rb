@@ -1,7 +1,11 @@
 ActiveAdmin.register Speaker do
+  menu id: "speakers", label: "Speakers", priority: 10
+
   permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed
 
-  scope :all
+  config.sort_order = :time
+
+  scope :all, default: true
   scope :confirmed
   scope :unconfirmed
 
@@ -9,8 +13,15 @@ ActiveAdmin.register Speaker do
     selectable_column
     column :name
     column :theme
-    column :time
-    column :confirmed
+    column :time do |speaker|
+      speaker.time.strftime('%H:%M')
+    end
+    column :confirmed do |speaker|
+      link_to confirm_admin_speaker_path(speaker), method: :post do
+        # status_tag()
+        "<span class=\"status_tag #{speaker.confirmed ? "yes" : "no"}\">#{speaker.confirmed ? "Yes" : "No"}</span>".html_safe
+      end
+    end
     column :updated_at
     actions
   end
@@ -22,7 +33,6 @@ ActiveAdmin.register Speaker do
     f.semantic_errors
     f.inputs "Speaker Information" do
       f.input :name
-      f.input :confirmed
     end
     f.inputs "Images" do
       f.input :company_image, :hint => f.object.company_image_identifier
@@ -42,18 +52,9 @@ ActiveAdmin.register Speaker do
     f.actions
   end
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
-
-
+  member_action :confirm, method: :post do
+    resource.confirmed = !resource.confirmed
+    resource.save
+    redirect_to admin_speakers_path, notice: "#{resource.name} is #{resource.confirmed ? "confirmed" : "NOT confirmed"} as speaker of this event!"
+  end
 end

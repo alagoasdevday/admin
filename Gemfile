@@ -40,9 +40,14 @@ gem 'capistrano-rails', group: :development
 
 # Use Active Admin
 gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin-sortable'
+gem 'acts_as_list'
 
 # Use Devise
 gem 'devise'
 
 # Use Devise
 gem 'carrierwave'
+
+# Use Quiet Assets
+gem 'quiet_assets', group: :development
