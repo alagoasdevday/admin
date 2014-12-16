@@ -14,7 +14,7 @@ ActiveAdmin.register Sponsor do
   filter :name
   filter :sponsor_category
 
-  form do |f|
+  form :html => { :multipart => true } do |f|
     f.semantic_errors
     f.inputs "Sponsor" do
       f.input :name
