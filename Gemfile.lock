@@ -72,6 +72,9 @@ GEM
     capistrano-rails (1.1.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capistrano-stats (1.1.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -88,6 +91,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colorize (0.7.4)
+    daemon_controller (1.2.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (3.4.1)
@@ -148,6 +152,10 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     orm_adapter (0.5.0)
+    passenger (4.0.55)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     quiet_assets (1.0.3)
@@ -235,7 +243,10 @@ DEPENDENCIES
   activeadmin-sortable
   acts_as_list
   bcrypt (~> 3.1.7)
+  capistrano
+  capistrano-bundler
   capistrano-rails
+  capistrano-rvm
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
@@ -243,6 +254,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+  passenger
   quiet_assets
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
