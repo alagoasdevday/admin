@@ -62,3 +62,6 @@ gem 'grape'
 
 # Use passenger
 gem 'passenger'
+
+# Use brakeman
+gem 'brakeman', group: :development
