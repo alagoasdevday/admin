@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# Use mysql2 as the database for Active Record (on production)
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,3 +53,6 @@ gem 'carrierwave'
 
 # Use Quiet Assets
 gem 'quiet_assets', group: :development
+
+# Use grape to generate API
+gem 'grape'
