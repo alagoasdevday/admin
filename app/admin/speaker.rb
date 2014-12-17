@@ -1,7 +1,7 @@
 ActiveAdmin.register Speaker do
   menu id: "speakers", label: "Speakers", priority: 10
 
-  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed
+  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed
 
   config.sort_order = :time
 
@@ -41,6 +41,7 @@ ActiveAdmin.register Speaker do
     f.inputs "Social Networks" do
       f.input :twitter_url, label: "Twitter URL"
       f.input :facebook_url, label: "Facebook URL"
+      f.input :github_url, label: "Github URL"
       f.input :linkedin_url, label: "LinkedIn URL"
       f.input :speakerdeck_url, label: "Speakerdeck URL"
       f.input :video_url, label: "Video URL"

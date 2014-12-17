@@ -7,6 +7,7 @@ module AlagoasDevDayApi::V1::Entities
     expose :confirmed, documentation: { type: 'boolean', desc: 'If Speaker is confirmed' }
     expose :twitter_url, documentation: { type: 'url', desc: 'Speaker Twitter URL' }
     expose :facebook_url, documentation: { type: 'url', desc: 'Speaker Facebook URL' }
+    expose :github_url, documentation: { type: 'url', desc: 'Speaker Github URL' }
     expose :linkedin_url, documentation: { type: 'url', desc: 'Speaker LinkedIn URL' }
     expose :speakerdeck_url, documentation: { type: 'url', desc: 'Speaker Speakerdeck URL' }
     expose :video_url, documentation: { type: 'url', desc: 'Speaker Video URL' }
