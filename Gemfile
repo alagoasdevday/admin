@@ -59,6 +59,8 @@ gem 'quiet_assets', group: :development
 
 # Use grape to generate API
 gem 'grape'
+gem 'grape-entity'
+gem 'hashie_rails'
 
 # Use passenger
 gem 'passenger'
