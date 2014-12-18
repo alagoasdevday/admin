@@ -1,5 +1,6 @@
 ActiveAdmin.register SponsorCategory do
   menu id: "sponsor_categories", label: "Categories", priority: 20, parent: "sponsor"
+  actions :all, except: :show
 
   permit_params :name
 
@@ -11,6 +12,9 @@ ActiveAdmin.register SponsorCategory do
     sortable_handle_column
     selectable_column
     column :name, :sortable => false
+    column :sponsors do |category|
+      category.sponsors.size
+    end
     column :updated_at, :sortable => false
     actions
   end

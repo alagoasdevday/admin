@@ -1,5 +1,6 @@
 ActiveAdmin.register Speaker do
   menu id: "speakers", label: "Speakers", priority: 10
+  actions :all, except: :show
 
   permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed
 
@@ -11,6 +12,9 @@ ActiveAdmin.register Speaker do
 
   index do
     selectable_column
+    column :image do |speaker|
+      image_tag speaker.speaker_image.admin_thumb.url
+    end
     column :name
     column :theme
     column :time do |speaker|

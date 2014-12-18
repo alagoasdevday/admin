@@ -112,7 +112,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  config.root_to = 'speakers#index'
 
   # == Admin Comments
   #
@@ -131,7 +131,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
   # == Controller Filters
   #
@@ -149,7 +149,7 @@ ActiveAdmin.setup do |config|
   # Breadcrumbs are enabled by default. You can customize them for individual
   # resources or you can disable them globally from here.
   #
-  # config.breadcrumb = false
+  config.breadcrumb = true
 
   # == Register Stylesheets & Javascripts
   #
@@ -208,19 +208,19 @@ ActiveAdmin.setup do |config|
   #
   # To disable/customize for the :admin namespace:
   #
-  #   config.namespace :admin do |admin|
-  #
-  #     # Disable the links entirely
-  #     admin.download_links = false
-  #
-  #     # Only show XML & PDF options
-  #     admin.download_links = [:xml, :pdf]
-  #
-  #     # Enable/disable the links based on block
-  #     #   (for example, with cancan)
-  #     admin.download_links = proc { can?(:view_download_links) }
-  #
-  #   end
+  config.namespace :admin do |admin|
+
+    # Disable the links entirely
+    admin.download_links = false
+
+    # Only show XML & PDF options
+    # admin.download_links = [:xml, :pdf]
+
+    # Enable/disable the links based on block
+    #   (for example, with cancan)
+    # admin.download_links = proc { can?(:view_download_links) }
+
+  end
 
   # == Pagination
   #

@@ -1,7 +1,14 @@
 ActiveAdmin.register Sponsor do
   menu id: "sponsor", label: "Sponsors", parent: 'sponsor', priority: 10
+  actions :all, except: :show
+  includes :sponsor_category
 
   permit_params :name, :image, :sponsor_category_id
+
+  scope :all, default: true
+  SponsorCategory.all.each do |category|
+    scope(category.name) { |scope| scope.where(sponsor_category: category) }
+  end
 
   index do
     selectable_column
@@ -12,7 +19,6 @@ ActiveAdmin.register Sponsor do
   end
 
   filter :name
-  filter :sponsor_category
 
   form :html => { :multipart => true } do |f|
     f.semantic_errors

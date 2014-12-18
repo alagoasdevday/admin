@@ -51,8 +51,9 @@ gem 'acts_as_list'
 # Use Devise
 gem 'devise'
 
-# Use Devise
+# Use Carrierwave
 gem 'carrierwave'
+gem 'rmagick','~> 2.13.2', :require => 'RMagick'
 
 # Use Quiet Assets
 gem 'quiet_assets', group: :development
