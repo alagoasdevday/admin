@@ -19,14 +19,14 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
                   "id": 1,
                   "name": "Sponsor Name",
                   "images": {
-                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/avatar.jpg"
+                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
                   }
                 },
                 {
                   "id": 2,
                   "name": "Sponsor Name",
                   "images": {
-                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/avatar.jpg"
+                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
                   }
                 }
               ]
@@ -39,7 +39,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
                   "id": 3,
                   "name": "Sponsor Name",
                   "images": {
-                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/3/avatar.jpg"
+                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/3/image.jpg"
                   }
                 }
               ]
@@ -66,14 +66,14 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
               "id": 1,
               "name": "Sponsor Name",
               "images": {
-                "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/avatar.jpg"
+                "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
               }
             },
             {
               "id": 2,
               "name": "Sponsor Name",
               "images": {
-                "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/avatar.jpg"
+                "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
               }
             }
           ]
