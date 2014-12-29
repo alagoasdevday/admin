@@ -59,7 +59,7 @@ gem 'rmagick','~> 2.13.2', :require => 'RMagick'
 gem 'quiet_assets', group: :development
 
 # Use grape to generate API
-gem 'grape'
+gem 'grape', '~> 0.9.0'
 gem 'grape-entity'
 gem 'hashie_rails'
 gem 'rack-cors', :require => 'rack/cors'
