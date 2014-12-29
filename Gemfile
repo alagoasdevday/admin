@@ -64,8 +64,5 @@ gem 'grape-entity'
 gem 'hashie_rails'
 gem 'rack-cors', :require => 'rack/cors'
 
-# Use passenger
-gem 'passenger'
-
 # Use brakeman
 gem 'brakeman', group: :development
