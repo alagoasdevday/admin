@@ -57,7 +57,9 @@ class AlagoasDevDayApi::V1::Speakers < Grape::API
       NOTE
     }
     get do
-       present Speaker.all, with: AlagoasDevDayApi::V1::Entities::SpeakerEntity
+      cache(key: "api:speakers:all", expires: 1.day) do
+        present Speaker.all, with: AlagoasDevDayApi::V1::Entities::SpeakerEntity
+      end
     end
   end
 end

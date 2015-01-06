@@ -48,7 +48,9 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
       NOTE
     }
     get do
-       present SponsorCategory.all, with: AlagoasDevDayApi::V1::Entities::SponsorCategoryEntity
+      cache(key: "api:sponsors:all") do
+        present SponsorCategory.all, with: AlagoasDevDayApi::V1::Entities::SponsorCategoryEntity
+      end
     end
 
     desc "Return all sponsors from a category", {

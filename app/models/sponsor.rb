@@ -6,4 +6,11 @@ class Sponsor < ActiveRecord::Base
   validates_presence_of :sponsor_category
 
   mount_uploader :image, ImageUploader
+
+  after_save :clear_cache
+
+  private
+    def clear_cache
+      Rails.cache.delete("api:sponsors:all")
+    end
 end

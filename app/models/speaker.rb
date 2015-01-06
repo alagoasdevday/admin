@@ -12,4 +12,11 @@ class Speaker < ActiveRecord::Base
 
   mount_uploader :speaker_image, ImageUploader
   mount_uploader :company_image, ImageUploader
+
+  after_save :clear_cache
+
+  private
+    def clear_cache
+      Rails.cache.delete("api:speakers:all")
+    end
 end

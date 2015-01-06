@@ -3,5 +3,7 @@ class API < Grape::API
 
   format :json
 
+  include Grape::Rails::Cache
+
   mount AlagoasDevDayApi::V1::Base
 end

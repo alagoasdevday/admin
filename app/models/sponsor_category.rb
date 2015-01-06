@@ -8,7 +8,13 @@ class SponsorCategory < ActiveRecord::Base
 
   validates_presence_of :name
 
+  after_save :clear_cache
+
   private
+    def clear_cache
+      Rails.cache.delete("api:sponsors:all")
+    end
+
     def update_position
       self.position = self.id
       self.save
