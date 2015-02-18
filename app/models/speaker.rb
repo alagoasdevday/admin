@@ -1,5 +1,5 @@
 class Speaker < ActiveRecord::Base
-  default_scope { order(:time) }
+  default_scope { order(confirmed: :desc).order(:time) }
 
   scope :confirmed, -> { where(confirmed: true) }
   scope :unconfirmed, -> { where(confirmed: false) }
