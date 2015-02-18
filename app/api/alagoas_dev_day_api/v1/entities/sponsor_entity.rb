@@ -1,5 +1,6 @@
 module AlagoasDevDayApi::V1::Entities
   class SponsorEntity < Grape::Entity
+    root 'sponsors', 'sponsor'
     expose :id, documentation: { type: 'integer', desc: 'ID' }
     expose :name, documentation: { type: 'string', desc: 'Sponsor Name' }
     expose :images do

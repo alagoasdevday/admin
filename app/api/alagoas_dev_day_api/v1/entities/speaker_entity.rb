@@ -1,7 +1,10 @@
 module AlagoasDevDayApi::V1::Entities
   class SpeakerEntity < Grape::Entity
+    root 'speakers', 'speaker'
     expose :id, documentation: { type: 'integer', desc: 'ID' }
     expose :name, documentation: { type: 'string', desc: 'Speaker Name' }
+    expose :bio, documentation: { type: 'string', desc: 'Speaker Bio' }
+    expose :company_name, documentation: { type: 'string', desc: 'Speaker Company Name' }
     expose :theme, documentation: { type: 'string', desc: 'Lecture Theme' }
     expose :time, documentation: { type: 'string', desc: 'Lecture Time' } { |model, options| model.time.strftime('%H:%M') }
     expose :confirmed, documentation: { type: 'boolean', desc: 'If Speaker is confirmed' }

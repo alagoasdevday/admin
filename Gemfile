@@ -64,6 +64,7 @@ gem 'grape-entity'
 gem 'grape-rails-cache'
 gem 'hashie_rails'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-contrib', :require => 'rack/contrib'
 
 # Use brakeman
 gem 'brakeman', group: :development

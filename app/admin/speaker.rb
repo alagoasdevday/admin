@@ -2,7 +2,7 @@ ActiveAdmin.register Speaker do
   menu id: "speakers", label: "Speakers", priority: 10
   actions :all, except: :show
 
-  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed
+  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed, :bio, :company_name
 
   config.sort_order = :time
 
@@ -37,6 +37,8 @@ ActiveAdmin.register Speaker do
     f.semantic_errors
     f.inputs "Speaker Information" do
       f.input :name
+      f.input :bio
+      f.input :company_name
     end
     f.inputs "Images" do
       f.input :company_image, :hint => f.object.company_image_identifier

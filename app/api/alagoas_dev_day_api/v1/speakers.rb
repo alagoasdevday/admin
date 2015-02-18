@@ -14,6 +14,8 @@ class AlagoasDevDayApi::V1::Speakers < Grape::API
             {
               "id": 1,
               "name": "Speaker Name",
+              "bio": "Speaker Bio",
+              "company_name": "Speaker Company Name",
               "theme": "Speaker Theme",
               "time": "09:00",
               "confirmed": false,
