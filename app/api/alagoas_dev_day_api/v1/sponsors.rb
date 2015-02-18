@@ -18,6 +18,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
                 {
                   "id": 1,
                   "name": "Sponsor Name",
+                  "url": "http://www.alagoasdevday.com.br",
                   "images": {
                     "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
                   }
@@ -25,6 +26,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
                 {
                   "id": 2,
                   "name": "Sponsor Name",
+                  "url": "http://www.alagoasdevday.com.br",
                   "images": {
                     "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
                   }
@@ -38,6 +40,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
                 {
                   "id": 3,
                   "name": "Sponsor Name",
+                  "url": "http://www.alagoasdevday.com.br",
                   "images": {
                     "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/3/image.jpg"
                   }
@@ -67,6 +70,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
             {
               "id": 1,
               "name": "Sponsor Name",
+              "url": "http://www.alagoasdevday.com.br",
               "images": {
                 "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
               }
@@ -74,6 +78,7 @@ class AlagoasDevDayApi::V1::Sponsors < Grape::API
             {
               "id": 2,
               "name": "Sponsor Name",
+              "url": "http://www.alagoasdevday.com.br",
               "images": {
                 "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
               }

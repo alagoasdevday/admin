@@ -3,7 +3,7 @@ ActiveAdmin.register Sponsor do
   actions :all, except: :show
   includes :sponsor_category
 
-  permit_params :name, :image, :sponsor_category_id
+  permit_params :name, :url, :image, :sponsor_category_id
 
   scope :all, default: true
   SponsorCategory.all.each do |category|
@@ -13,6 +13,7 @@ ActiveAdmin.register Sponsor do
   index do
     selectable_column
     column :name
+    column :url
     column :sponsor_category
     column :updated_at
     actions
@@ -24,6 +25,7 @@ ActiveAdmin.register Sponsor do
     f.semantic_errors
     f.inputs "Sponsor" do
       f.input :name
+      f.input :url, label: "URL"
       f.input :image
       f.input :sponsor_category
     end
