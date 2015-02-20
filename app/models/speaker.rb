@@ -1,5 +1,5 @@
 class Speaker < ActiveRecord::Base
-  default_scope { order(confirmed: :desc).order(:time) }
+  default_scope { order(confirmed: :desc) }
 
   scope :confirmed, -> { where(confirmed: true) }
   scope :unconfirmed, -> { where(confirmed: false) }
@@ -8,7 +8,6 @@ class Speaker < ActiveRecord::Base
   validates_presence_of :speaker_image
   validates_presence_of :company_image
   validates_presence_of :theme
-  validates_presence_of :time
 
   mount_uploader :speaker_image, ImageUploader
   mount_uploader :company_image, ImageUploader

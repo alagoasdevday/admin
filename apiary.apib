@@ -11,54 +11,52 @@ All speakers object with all its details. Includes a boolean *confirmed* that sh
 ### List all Speakers [GET]
 + Response 200 (application/json)
 
-        [
-            {
-                "id": 1,
-                "name": "Speaker Name",
-                "bio": "Speaker Bio",
-                "company_name": "Speaker Company Name",
-                "theme": "Speaker Theme",
-                "time": "09:00",
-                "confirmed": false,
-                "twitter_url": "http://twitter.com/aldevday",
-                "facebook_url": "https://www.facebook.com/devdayalagoas",
-                "github_url: "http://github.com/alagoasdevday",
-                "linkedin_url": "https://www.linkedin.com/in/devdayalagoas",
-                "speakerdeck_url": "https://speakerdeck.com",
-                "video_url": "https://www.youtube.com/watch?v=rylyfI2PLzE",
-                "images": {
-                    "company": {
-                        "original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/company_image/1/image.jpg"
-                    },
-                    "speaker": {
-                        "original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/speaker_image/1/image.jpg"
-                    }
-                }
-            },
-            {
-                "id": 2,
-                "name": "Speaker Name",
-                "bio": "Speaker Bio",
-                "company_name": "Speaker Company Name",
-                "theme": "Speaker Theme",
-                "time": "10:00",
-                "confirmed": true,
-                "twitter_url": "http://twitter.com/aldevday",
-                "facebook_url": "https://www.facebook.com/devdayalagoas",
-                "github_url: "http://github.com/alagoasdevday",
-                "linkedin_url": "https://www.linkedin.com/in/devdayalagoas",
-                "speakerdeck_url": "https://speakerdeck.com",
-                "video_url": "https://www.youtube.com/watch?v=rylyfI2PLzE",
-                "images": {
-                    "company": {
-                        "original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/company_image/2/image.jpg"
-                    },
-                    "speaker": {
-                        "original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/speaker_image/2/image.jpg"
-                    }
-                }
-            }
-        ]
+		[
+			{
+				"id": 1,
+				"name": "Speaker Name",
+				"bio": "Speaker Bio",
+				"company_name": "Speaker Company Name",
+				"theme": "Speaker Theme",
+				"confirmed": false,
+				"twitter_url": "http://twitter.com/aldevday",
+				"facebook_url": "https://www.facebook.com/devdayalagoas",
+				"github_url: "http://github.com/alagoasdevday",
+				"linkedin_url": "https://www.linkedin.com/in/devdayalagoas",
+				"speakerdeck_url": "https://speakerdeck.com",
+				"video_url": "https://www.youtube.com/watch?v=rylyfI2PLzE",
+				"images": {
+					"company": {
+						"original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/company_image/1/image.jpg"
+					},
+					"speaker": {
+						"original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/speaker_image/1/image.jpg"
+					}
+				}
+			},
+			{
+				"id": 2,
+				"name": "Speaker Name",
+				"bio": "Speaker Bio",
+				"company_name": "Speaker Company Name",
+				"theme": "Speaker Theme",
+				"confirmed": true,
+				"twitter_url": "http://twitter.com/aldevday",
+				"facebook_url": "https://www.facebook.com/devdayalagoas",
+				"github_url: "http://github.com/alagoasdevday",
+				"linkedin_url": "https://www.linkedin.com/in/devdayalagoas",
+				"speakerdeck_url": "https://speakerdeck.com",
+				"video_url": "https://www.youtube.com/watch?v=rylyfI2PLzE",
+				"images": {
+					"company": {
+						"original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/company_image/2/image.jpg"
+					},
+					"speaker": {
+						"original": "http://admin.alagoasdevday.com.br/system/uploads/speaker/speaker_image/2/image.jpg"
+					}
+				}
+			}
+		]
 
 # Group Sponsors
 
@@ -67,65 +65,65 @@ All sponsor categories object with all its details and attached sponsors.
 ### All sponsors grouped by category [GET]
 + Response 200 (application/json)
 
-        [
-            {
-                "id": 1,
-                "name": "Platinum",
-                "sponsors": [
-                    {
-                        "id": 1,
-                        "name": "Sponsor Name",
-                        "url": "http://www.alagoasdevday.com/",
-                        "images": {
-                            "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
-                        }
-                    },
-                    {
-                        "id": 2,
-                        "name": "Sponsor Name",
-                        "url": "http://www.alagoasdevday.com/",
-                        "images": {
-                            "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "name": "Gold",
-                "sponsors": [
-                    {
-                        "id": 3,
-                        "name": "Sponsor Name",
-                        "url": "http://www.alagoasdevday.com/",
-                        "images": {
-                            "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/3/image.jpg"
-                        }
-                    }
-                ]
-            }
-        ]
+		[
+			{
+				"id": 1,
+				"name": "Platinum",
+				"sponsors": [
+					{
+						"id": 1,
+						"name": "Sponsor Name",
+						"url": "http://www.alagoasdevday.com/",
+						"images": {
+							"original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
+						}
+					},
+					{
+						"id": 2,
+						"name": "Sponsor Name",
+						"url": "http://www.alagoasdevday.com/",
+						"images": {
+							"original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
+						}
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "Gold",
+				"sponsors": [
+					{
+						"id": 3,
+						"name": "Sponsor Name",
+						"url": "http://www.alagoasdevday.com/",
+						"images": {
+							"original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/3/image.jpg"
+						}
+					}
+				]
+			}
+		]
 
 ## Sponsors on a single category [/sponsors/{id}]
 All sponsors attached on a single category.
 ### All sponsors from a category [GET]
 + Response 200 (application/json)
 
-        [
-            {
-                "id": 1,
-                "name": "Sponsor Name",
-                "url": "http://www.alagoasdevday.com/",
-                "images": {
-                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
-                }
-            },
-            {
-                "id": 2,
-                "name": "Sponsor Name",
-                "url": "http://www.alagoasdevday.com/",
-                "images": {
-                    "original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
-                }
-            }
-        ]
+		[
+			{
+				"id": 1,
+				"name": "Sponsor Name",
+				"url": "http://www.alagoasdevday.com/",
+				"images": {
+					"original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/1/image.jpg"
+				}
+			},
+			{
+				"id": 2,
+				"name": "Sponsor Name",
+				"url": "http://www.alagoasdevday.com/",
+				"images": {
+					"original": "http://admin.alagoasdevday.com.br/system/uploads/sponsor/image/2/image.jpg"
+				}
+			}
+		]

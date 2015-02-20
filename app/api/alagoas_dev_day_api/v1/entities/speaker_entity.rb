@@ -6,7 +6,6 @@ module AlagoasDevDayApi::V1::Entities
     expose :bio, documentation: { type: 'string', desc: 'Speaker Bio' }
     expose :company_name, documentation: { type: 'string', desc: 'Speaker Company Name' }
     expose :theme, documentation: { type: 'string', desc: 'Lecture Theme' }
-    expose :time, documentation: { type: 'string', desc: 'Lecture Time' } { |model, options| model.time.strftime('%H:%M') }
     expose :confirmed, documentation: { type: 'boolean', desc: 'If Speaker is confirmed' }
     expose :twitter_url, documentation: { type: 'url', desc: 'Speaker Twitter URL' }
     expose :facebook_url, documentation: { type: 'url', desc: 'Speaker Facebook URL' }

@@ -2,9 +2,8 @@ ActiveAdmin.register Speaker do
   menu id: "speakers", label: "Speakers", priority: 10
   actions :all, except: :show
 
-  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :time, :confirmed, :bio, :company_name
-
   config.sort_order = :time
+  permit_params :name, :company_image, :speaker_image, :theme, :twitter_url, :facebook_url, :github_url, :linkedin_url, :speakerdeck_url, :video_url, :confirmed, :bio, :company_name
 
   scope :all, default: true
   scope :confirmed
@@ -17,9 +16,6 @@ ActiveAdmin.register Speaker do
     end
     column :name
     column :theme
-    column :time do |speaker|
-      speaker.time.strftime('%H:%M')
-    end
     column :confirmed do |speaker|
       link_to confirm_admin_speaker_path(speaker), method: :post do
         # status_tag()
@@ -54,7 +50,6 @@ ActiveAdmin.register Speaker do
     end
     f.inputs "Lecture Information" do
       f.input :theme
-      f.input :time, label: "Starting Time"
     end
     f.actions
   end

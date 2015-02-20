@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218132024) do
+ActiveRecord::Schema.define(version: 20150220005222) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20150218132024) do
     t.datetime "updated_at"
   end
 
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: true do |t|
     t.string   "name"
@@ -44,8 +44,18 @@ ActiveRecord::Schema.define(version: 20150218132024) do
     t.datetime "updated_at"
   end
 
-  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
-  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
+  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "schedules", force: true do |t|
+    t.string   "title"
+    t.time     "time"
+    t.integer  "speaker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "schedules", ["speaker_id"], name: "index_schedules_on_speaker_id", using: :btree
 
   create_table "speakers", force: true do |t|
     t.string   "name"
@@ -54,14 +64,13 @@ ActiveRecord::Schema.define(version: 20150218132024) do
     t.string   "theme"
     t.string   "twitter_url"
     t.string   "facebook_url"
+    t.string   "github_url"
     t.string   "linkedin_url"
     t.string   "speakerdeck_url"
     t.string   "video_url"
-    t.time     "time"
     t.boolean  "confirmed",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "github_url"
     t.text     "bio"
     t.string   "company_name"
   end
@@ -82,6 +91,6 @@ ActiveRecord::Schema.define(version: 20150218132024) do
     t.string   "url"
   end
 
-  add_index "sponsors", ["sponsor_category_id"], name: "index_sponsors_on_sponsor_category_id"
+  add_index "sponsors", ["sponsor_category_id"], name: "index_sponsors_on_sponsor_category_id", using: :btree
 
 end

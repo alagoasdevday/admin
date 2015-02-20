@@ -5,6 +5,7 @@ module AlagoasDevDayApi
       prefix 'api'
       version 'v1', using: :path
 
+      mount Schedules
       mount Speakers
       mount Sponsors
     end
